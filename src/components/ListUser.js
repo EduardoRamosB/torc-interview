@@ -1,6 +1,6 @@
 import Button from "./Button";
 
-const ListUser = ({ name, list, changeItem }) => {
+const ListUser = ({ name, list, changeItem, listIdx }) => {
   return (
     <>
       <h3>{name}</h3>
@@ -8,9 +8,9 @@ const ListUser = ({ name, list, changeItem }) => {
         list.map((e, i) => {
           return (
               <p key={i}>
-                <Button direction='left' changeItem={changeItem} row={i} list={list}/>
+                <Button direction='left' changeItem={changeItem} row={i} list={list} listIdx={listIdx}/>
                 {e}
-                <Button direction='right' changeItem={changeItem} row={i} list={list}/>
+                <Button direction='right' changeItem={changeItem} row={i} list={list} listIdx={listIdx}/>
               </p>
           )
         })
