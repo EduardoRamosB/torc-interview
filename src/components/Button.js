@@ -1,6 +1,6 @@
-const Button = ({ direction, changeItem, row }) => {
+const Button = ({ direction, changeItem, row, list }) => {
   return (
-    <button onClick={() => changeItem(row, direction)} style={{marginRight:'15px'}}>
+    <button onClick={() => changeItem(row, direction, list)} style={{marginRight:'15px'}}>
       {direction === 'left' ? '<' : '>'}
     </button>
   )
