@@ -4,7 +4,9 @@ const Button = ({ direction, changeItem, row, list, listIdx }) => {
     (listIdx - 1) < 1 ? 3 : listIdx - 1
 
   return (
-    <button onClick={() => changeItem(row, direction, list, sideList)} style={{marginRight:'15px'}}>
+    <button onClick={() => changeItem(row, direction, list, sideList)}
+            className="btn btn-primary"
+            style={{marginRight:'15px'}}>
       {direction === 'left' ? '<' : '>'}
     </button>
   )
